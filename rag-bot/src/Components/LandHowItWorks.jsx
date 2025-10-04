@@ -5,7 +5,7 @@ function LandHowItWorks() {
   return (
     <section className="how-it-works">
       <div className="how-it-works-container">
-        <h2 className="section-headline">
+        <h2 className="section-headline" id='how'>
           From Chaos to Clarity in 3 Simple Steps
         </h2>
         

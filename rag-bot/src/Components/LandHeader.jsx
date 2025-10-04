@@ -29,9 +29,8 @@ function LandHeader() {
           </div>
           
           <nav className="nav-links">
-            <a href="#docs">How It Works</a>
-            <a href="#cloud">Features</a>
-            <a href="#cloud">Use Cases</a>
+            <a href="#how">How It Works</a>
+            <a href="#usecase">Use Cases</a>
             <a href="#updates">Updates</a>
           </nav>
         </div>

@@ -5,7 +5,7 @@ function LandUseCase() {
   return (
     <section className="use-cases">
       <div className="use-cases-container">
-        <h2 className="section-headline">
+        <h2 className="section-headline" id='usecase'>
           Built for Researchers, Teams, and Innovators
         </h2>
         

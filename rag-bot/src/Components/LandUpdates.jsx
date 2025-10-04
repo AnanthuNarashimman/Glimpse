@@ -8,7 +8,7 @@ function LandUpdates() {
         <div className="updates-icon">
           <Bell size={32} strokeWidth={1.5} />
         </div>
-        <h2 className="updates-title">Updates</h2>
+        <h2 className="updates-title" id='updates'>Updates</h2>
         <p className="updates-text">
           Currently under development and will post new updates here.
         </p>
