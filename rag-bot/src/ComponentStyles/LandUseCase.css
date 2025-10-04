@@ -1,0 +1,146 @@
+/* Use Cases Section Styles */
+.use-cases {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 100px 0;
+}
+
+.use-cases-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-headline {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0 0 80px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-family: 'PLayfair display';
+}
+
+/* Use Cases Grid */
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.use-case-card {
+  padding: 48px 32px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.use-case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: #3B9EFF;
+}
+
+/* Use Case Icon */
+.use-case-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #fafafa;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.use-case-icon svg {
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.use-case-card:hover .use-case-icon {
+  border-color: #3B9EFF;
+  background-color: #f0f8ff;
+}
+
+.use-case-card:hover .use-case-icon svg {
+  color: #3B9EFF;
+}
+
+/* Use Case Content */
+.use-case-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+  font-family: 'Playfair display';
+}
+
+.use-case-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0;
+  font-family: 'Inter';
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section-headline {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .use-cases-grid {
+    gap: 24px;
+  }
+  
+  .use-case-card {
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .use-cases {
+    padding: 80px 0;
+  }
+  
+  .section-headline {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+  
+  .use-cases-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .use-case-card {
+    padding: 32px 24px;
+  }
+  
+  .use-case-icon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .use-case-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .use-case-title {
+    font-size: 20px;
+  }
+  
+  .use-case-description {
+    font-size: 15px;
+  }
+}
