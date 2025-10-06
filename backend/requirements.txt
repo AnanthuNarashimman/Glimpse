@@ -1,0 +1,22 @@
+# Flask Framework
+Flask
+Flask-Cors
+
+# Google & Firebase
+google-generativeai
+firebase-admin
+
+# LangChain & RAG
+langchain
+langchain-google-genai
+langchain-community
+
+# Vector Database
+chromadb
+
+# Document Processing
+PyPDF2
+python-docx
+
+# Utilities
+python-dotenv
