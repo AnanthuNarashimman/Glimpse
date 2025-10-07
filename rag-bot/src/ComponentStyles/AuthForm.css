@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Nunito+Sans:wght@400;600&display=swap');
+
+/* Color palette aligned with requested theme */
+:root {
+  --primary-color: #4aa1f8;   /* main brand (buttons, accents) */
+  --secondary-color: #3089e8; /* hover/darker tone for primary */
+  --link-color: #4aa1f8;      /* links use main brand */
+  --anim-start: #74349f;      /* animation gradient start */
+  --anim-end: #2eb0b2;        /* animation gradient end */
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #efefef;
+  --gray-2: #757575;
+}
+
+/* Layout matches other pages (header is fixed) */
+.form-container {
+  min-height: calc(100vh - 80px);
+  padding: 120px 24px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fafafa;
+}
+
+/* Card matches border/radius/shadow language */
+form#login-form,
+form#signup-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 28px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+form h2 {
+  margin: 0 0 16px 0;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+/* Inputs align to the system */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.input-group input {
+  padding: 12px 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--link-color);
+  box-shadow: 0 0 0 3px rgba(74, 161, 248, 0.18);
+}
+
+/* Buttons share the same visual language as .btn-primary */
+.submit-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Figtree', sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Link text matches header/link style */
+.switch-link {
+  margin-top: 12px;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #666;
+}
+
+.switch-link a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  form#login-form,
+  form#signup-form {
+    padding: 22px;
+  }
+}
+
+/* ===== Animated container + overlay (route-like transitions) ===== */
+.container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.col { width: 50%; }
+
+/* Center the auth card horizontally and vertically */
+.row.align-items-center { justify-content: center; align-items: center; }
+.row.align-items-center .col { width: auto; }
+.form-wrapper { width: 100%; max-width: 28rem; margin: 0 auto; }
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-wrapper { width: 100%; max-width: 28rem; }
+
+.form.sign-in,
+.form.sign-up,
+.social-list.sign-in,
+.social-list.sign-up {
+  transform: scale(0);
+  transition: .5s ease-in-out;
+}
+
+.container.sign-in .form.sign-in,
+.container.sign-in .social-list.sign-in,
+.container.sign-in .social-list.sign-in > div,
+.container.sign-up .form.sign-up,
+.container.sign-up .social-list.sign-up,
+.container.sign-up .social-list.sign-up > div {
+  transform: scale(1);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300vw;
+  transform: translate(35%, 0);
+  background-image: linear-gradient(-45deg, var(--anim-start) 0%, var(--anim-end) 100%);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  z-index: 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+  border-bottom-right-radius: max(50vw, 50vh);
+  border-top-left-radius: max(50vw, 50vh);
+}
+
+.container.sign-in::before { transform: translate(0, 0); right: 50%; }
+.container.sign-up::before { transform: translate(100%, 0); right: 50%; }
+
+.content-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.text { margin: 4rem; color: var(--white); }
+.text h2 { font-size: 3.5rem; font-weight: 800; margin: 2rem 0; transition: transform .7s cubic-bezier(0.22, 1, 0.36, 1), opacity .6s ease; opacity: 0; }
+.text p { font-weight: 600; transition: transform .7s cubic-bezier(0.22, 1, 0.36, 1), opacity .6s ease; transition-delay: .1s; opacity: 0; }
+
+.text.sign-in { text-align: left; }
+.text.sign-up { text-align: right; }
+
+.text.sign-in h2, .text.sign-in p { transform: translateX(-250%); }
+.text.sign-up h2, .text.sign-up p { transform: translateX(250%); }
+
+.container.sign-in .text.sign-in h2,
+.container.sign-in .text.sign-in p,
+.container.sign-up .text.sign-up h2,
+.container.sign-up .text.sign-up p { transform: translateX(0); opacity: 1; }
+
+@media only screen and (max-width: 425px) {
+  .container::before,
+  .container.sign-in::before,
+  .container.sign-up::before {
+    height: 100vh;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    z-index: 0;
+    transform: none;
+    right: 0;
+  }
+
+  .col { width: 100%; position: absolute; padding: 2rem; background-color: var(--white); border-top-left-radius: 2rem; border-top-right-radius: 2rem; transform: translateY(100%); transition: 1s ease-in-out; }
+  .row { align-items: flex-end; justify-content: flex-end; }
+  .form.sign-in, .form.sign-up { box-shadow: none; margin: 0; padding: 0; }
+  .content-row { align-items: flex-start; }
+  .text { margin: 0; }
+  .text p { display: none; }
+  .text h2 { margin: .5rem; font-size: 2rem; }
+}

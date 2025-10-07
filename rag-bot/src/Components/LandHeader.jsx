@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../ComponentStyles/LandHeader.css';
 import Logo from '../assets/Images/Logo.png';
 
 function LandHeader() {
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState('');
 
@@ -36,24 +38,12 @@ function LandHeader() {
         </div>
         
         <div className="header-right">
-          <button onClick={() => openModal('login')} className="btn-outline">Log in</button>
-          <button onClick={() => openModal('signup')} className="btn-primary">Sign up</button>
+          <button onClick={() => navigate('/login')} className="btn-outline">Log in</button>
+          <button onClick={() => navigate('/signup')} className="btn-primary">Sign up</button>
         </div>
       </div>
       
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal}>&times;</button>
-            <div className="modal-body">
-              <h3>{modalType === 'login' ? 'Log In' : 'Sign Up'}</h3>
-              <p>Currently under development.</p>
-              <p>Stay tuned for updates!</p>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Removed modal; routing to /auth instead */}
     </header>
   )
 }
