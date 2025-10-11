@@ -1,0 +1,281 @@
+.homepage {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fafafa;
+  padding: 60px 0;
+  margin-top: 30px;
+}
+
+.homepage-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Welcome Section */
+.welcome-section {
+  margin-bottom: 60px;
+}
+
+.welcome-title {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+  font-family: 'Times New Roman', serif;
+}
+
+.welcome-subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.action-tile {
+  padding: 48px 40px;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.action-tile:hover {
+  transform: translateY(-4px);
+  border-color: #3B9EFF;
+  box-shadow: 0 12px 32px rgba(59, 158, 255, 0.15);
+}
+
+.action-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #fafafa;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.action-icon svg {
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.action-tile:hover .action-icon {
+  background-color: #f0f8ff;
+  border-color: #3B9EFF;
+}
+
+.action-tile:hover .action-icon svg {
+  color: #3B9EFF;
+}
+
+.action-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px;
+}
+
+.action-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+/* Recent Section */
+.recent-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 32px;
+}
+
+/* Brains Grid */
+.brains-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.brain-card {
+  padding: 32px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.brain-card:hover {
+  transform: translateY(-2px);
+  border-color: #3B9EFF;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.brain-header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.brain-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #fafafa;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.brain-icon svg {
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.brain-card:hover .brain-icon {
+  background-color: #f0f8ff;
+  border-color: #3B9EFF;
+}
+
+.brain-card:hover .brain-icon svg {
+  color: #3B9EFF;
+}
+
+.brain-info {
+  flex: 1;
+}
+
+.brain-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+}
+
+.brain-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #6a6a6a;
+}
+
+.brain-meta svg {
+  color: #6a6a6a;
+}
+
+.brain-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 16px;
+}
+
+.brain-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+.stat {
+  font-weight: 500;
+}
+
+.stat-divider {
+  color: #d4d4d4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .welcome-title {
+    font-size: 40px;
+  }
+
+  .brains-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    padding: 40px 0;
+  }
+
+  .welcome-section {
+    margin-bottom: 40px;
+  }
+
+  .welcome-title {
+    font-size: 32px;
+  }
+
+  .welcome-subtitle {
+    font-size: 16px;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+
+  .action-tile {
+    padding: 32px 24px;
+  }
+
+  .action-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .action-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .action-title {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .brains-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .brain-card {
+    padding: 24px;
+  }
+}

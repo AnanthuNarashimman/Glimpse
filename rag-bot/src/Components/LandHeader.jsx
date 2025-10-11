@@ -43,7 +43,7 @@ function LandHeader() {
         </div>
       </div>
       
-      {/* Removed modal; routing to /auth instead */}
+      
     </header>
   )
 }

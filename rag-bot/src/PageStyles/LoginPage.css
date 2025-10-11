@@ -1,0 +1,156 @@
+.loginPage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.leftAuth {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+}
+
+.rightAuth {
+    /* background: #3B9EFF; */
+    background: linear-gradient(135deg, #7B3FF2 0%, #4A6FA5 50%, #2DD4BF 100%);
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authContent {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.authHead {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.authHead h2 {
+    font-family: 'Figtree';
+    font-size: 3rem;
+}
+
+.authHead p {
+    font-family: 'Inter';
+    font-size: 17px;
+}
+
+.loginForm {
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    gap: 10%;
+}
+
+.signupForm {
+    gap: 7%;
+}
+
+.loginForm h3 {
+    font-family: 'Inter';
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 3px 4px #00000054;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputField input {
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 4px #00000046;
+    padding: 5px;
+}
+
+.inputField label {
+    font-family: 'Figtree';
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.loginForm input[type='submit'] {
+    width: 120px;
+    height: 40px !important;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-size: 17px;
+    font-weight: 600;
+    background: #186bd7;
+    color: white;
+    margin-top: 30px;
+    border: 3px solid #186bd7;
+    transition: .3s ease;
+}
+
+.loginForm input[type='submit']:hover {
+    background: white;
+    color: #186bd7;
+}
+
+.signupButton {
+    width: 120px;
+    height: 40px !important;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-size: 17px;
+    font-weight: 600;
+    background: #186bd7;
+    color: white;
+    margin-top: 30px;
+    border: 3px solid #186bd7;
+    transition: .3s ease;
+}
+
+.signupButton:hover {
+    background: white;
+    color: #186bd7;
+}
+
+.signUpRedirect {
+    color: white;
+    font-family: 'Inter';
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.authLogo {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.authLogo h2 {
+    color: #666;
+}

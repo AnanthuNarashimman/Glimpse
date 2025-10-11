@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap');
+
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.logo-icon img {
+  width: 150px;
+  height: 150px;
+}
+
+.logo h2 {
+  margin-left: 10px;
+  font-family: 'Figtree';
+}
+
+/* Navigation Links - Centered */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  font-family: 'Nunito sans';
+}
+
+.nav-links a:hover {
+  color: #3B9EFF;
+}
+
+/* Header Right - Contact Button */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.btn-primary {
+  padding: 8px 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Figtree';
+}
+
+.btn-primary:hover {
+  background-color: #2a2a2a;
+  border-color: #2a2a2a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .header-container {
+    padding: 0 16px;
+  }
+
+  .logo-icon {
+    margin-left: -15%;
+  }
+
+  .logo-icon img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo h2 {
+    margin-left: 2px;
+    font-size: 1.5rem;
+  }
+
+  .header-right button {
+    width: 90px;
+    font-size: 13px;
+    padding: 6px 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 24px;
+  }
+  
+  .nav-links a {
+    font-size: 14px;
+  }
+}
