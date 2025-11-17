@@ -1,3 +1,5 @@
+<img width="100%" height="136" alt="Glimpse" src="https://github.com/user-attachments/assets/f2c5f88d-c7be-4fa9-aeee-47c8d5c1e875" />
+
 # Glimpse: The Multimodal Intelligence Engine
 
 ![Status](https://img.shields.io/badge/status-under%20development-yellow)
